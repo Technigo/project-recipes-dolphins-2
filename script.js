@@ -6907,7 +6907,9 @@ const displayRecipe = (recipesData) => {
         let label = item.recipe.label
         
         recipes.innerHTML += `
+        <div class="img-container">
         <img src= '${img}'/>
+        </div>
         <h1>${label}</h1>
         `
     })
