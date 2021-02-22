@@ -1,4 +1,6 @@
 const recipes = document.getElementById("recipes")
+const userInput = document.getElementById('user-input')
+const searchButton = document.getElementById('search-button')
 const arrayRecipe = // 20210222142043
 // https://api.edamam.com/search?q=chicken&app_id=aec4b6aa&app_key=b760316ae5d674221245ca577a9ae586
 
@@ -6890,6 +6892,12 @@ const fetchRecipe = (URL) => {
   .then((recipesData) => {
       console.log(recipesData)
       displayRecipe(recipesData)
+      if(recipesData.count === 0) {
+        alert('No hits')
+      }
+  })
+  .catch((error) => {
+      alert('error')
   })
 }
 
@@ -6905,13 +6913,17 @@ const displayRecipe = (recipesData) => {
     })
 }
 
-displayRecipe(arrayRecipe)
+/* displayRecipe(arrayRecipe) */
 
-const handleInput = () => {
-    const query = "chicken";
-/*     const API_URL =  'https://api.edamam.com/search?q=' + query + '&app_id=aec4b6aa&app_key=b760316ae5d674221245ca577a9ae586'
-    fetchRecipe(API_URL) */
-  }
-  
-  handleInput ();
-
+const handleInput = (userInput) => {
+    const query = userInput;
+    const API_URL =  'https://api.edamam.com/search?q=' + query + '&app_id=aec4b6aa&app_key=b760316ae5d674221245ca577a9ae586'
+    fetchRecipe(API_URL)
+}
+    
+  searchButton.addEventListener('click', (event) => {
+    event.preventDefault()
+    recipes.innerHTML = ""; 
+    handleInput(userInput.value)
+    userInput.value = ""
+  })
