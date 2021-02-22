@@ -4,10 +4,59 @@ body {
   background-color: #fff;
   color: #202125;
 
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  /* font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif; */
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.user-input {  /* Search bar */
+  border: 1px solid #e4e4e4;
+  border-radius: 3px;
+  background-color: rgb(251, 251, 251);
+}
+
+.search-button {
+  border-radius: 3px;
+  padding: ;
 }
 
 .recipes-container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.recipes {
+  width: 100%;
+}
+
+.recipes img {  /* Rundade hörn på receptbilderna */
+  border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+  .recipes-container {
+    flex-direction: row;
+  }
+ 
+  .recipes {
+   width: 50%;
+ }
+}
+
+@media (max-width: 1000px) {
+  .recipes-container {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .recipes {
+    width: 25%;
+  }
 }
