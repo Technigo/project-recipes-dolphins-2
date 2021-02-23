@@ -6881,24 +6881,23 @@ const displayRecipe = (recipesData) => {
 
 const handleInput = (userInput) => {
   const query = userInput;
-  let API_URL = 'https://api.edamam.com/search?q=' + query + '&app_id=aec4b6aa&app_key=b760316ae5d674221245ca577a9ae586'
+  let API_URL = 'https://api.edamam.com/search?q=' + query + '&app_id=38a129f8&app_key=ad250481ec39e7ffc0c0904ddbc693f8'
   fetchRecipe(API_URL)
-  console.log(API_URL)
 
   filterBtn.addEventListener('click', () => {
     let filterItems = ""
     recipes.innerHTML = "";
     const checked = document.querySelectorAll('.checkbox:checked')
+
     checked.forEach((box) => filterItems += `&health=${box.value}`)
-    console.log(filterItems)
+    
     filter(filterItems)
     filterItems = ""
-    userInput.value = ""
   })
 
   const filter = (items) => {
+    recipes.innerHTML = "";
     API_URL = API_URL + items
-    console.log(API_URL)
     fetchRecipe(API_URL)
   }
 }
@@ -6915,4 +6914,4 @@ accordion.addEventListener('click', () => {
   accordion.classList.toggle('active')
 })
 
-fetchRecipe("https://api.edamam.com/search?q=chicken&app_id=aec4b6aa&app_key=b760316ae5d674221245ca577a9ae586")
+fetchRecipe("https://api.edamam.com/search?q=chicken&app_id=38a129f8&app_key=ad250481ec39e7ffc0c0904ddbc693f8")
