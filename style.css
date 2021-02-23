@@ -14,6 +14,28 @@ body {
 
 }
 
+.accordion {
+  height: 30px;
+  width: 100%;
+  background-color: #202125;
+}
+
+.accordion-extend {
+  display:none;
+  background-color: black;
+}
+
+.checkbox {
+  display: ;
+  cursor: pointer;
+}
+
+.active + div {
+  display: block;
+  height: 200px;
+  width: 100%;
+}
+
 .main {
   width: 100%;
   display: flex;

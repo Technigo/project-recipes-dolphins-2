@@ -22,17 +22,17 @@
         <input type="text" id="user-input" class="user-input" name="user-input" />
         <button id='search-button' class='search-button'>Search</button>
       </form>
-      <div class="accordion">
-        <div class="accordion-extend">
-          <input type="checkbox" id="checkbox" name="checkbox" />
-          <label for="checkbox"></label>
-          <input type="checkbox" id="checkbox" name="checkbox" />
-          <label for="checkbox"></label>
-          <input type="checkbox" id="checkbox" name="checkbox" />
-          <label for="checkbox"></label>
-          <input type="checkbox" id="checkbox" name="checkbox" />
-          <label for="checkbox"></label>
-        </div>
+      <div class="accordion" id="accordion"></div>
+      <div class="accordion-extend">
+        <input type="checkbox" class="checkbox"  id="alcoholfree" name="checkbox" value="alcohol-free"/>
+        <label for="alcoholfree">Alcohol Free</label>
+        <input type="checkbox" class="checkbox" id="vegetarian" name="checkbox" value="vegetarian"/>
+        <label for="vegetarian">Vegetarian</label>
+        <input type="checkbox" class="checkbox" id="treenutfree" name="checkbox" value="tree-nut-free"/>
+        <label for="treenutfree">Tree-nut free</label>
+        <input type="checkbox" class="checkbox" id="peanutfree" name="checkbox" value="peanut-free"/>
+        <label for="peanutfree">Peanut free</label>
+        <button class="filter" id="filter">Filter</button>
       </div>
     </section>
   </header>
