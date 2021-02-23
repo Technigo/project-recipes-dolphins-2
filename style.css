@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
 }
+
 body {
   margin: 0;
   background-color: #fff;
@@ -28,6 +29,8 @@ body {
 .checkbox {
   display: ;
   cursor: pointer;
+  font-family: ;
+  font-size: ; 
 }
 
 .active + div {

@@ -3,7 +3,7 @@ const userInput = document.getElementById('user-input')
 const searchButton = document.getElementById('search-button')
 const accordion = document.getElementById('accordion')
 const filterBtn = document.getElementById('filter')
-const checked = document.querySelectorAll('.checkbox:checked')
+
 const arrayRecipe = // 20210222142043
   // https://api.edamam.com/search?q=chicken&app_id=aec4b6aa&app_key=b760316ae5d674221245ca577a9ae586
 
@@ -6881,25 +6881,34 @@ const displayRecipe = (recipesData) => {
 
 const handleInput = (userInput) => {
   const query = userInput;
-  const API_URL = 'https://api.edamam.com/search?q=' + query + '&app_id=aec4b6aa&app_key=b760316ae5d674221245ca577a9ae586'
-
+  let API_URL = 'https://api.edamam.com/search?q=' + query + '&app_id=aec4b6aa&app_key=b760316ae5d674221245ca577a9ae586'
   fetchRecipe(API_URL)
- 
+  console.log(API_URL)
+
+  filterBtn.addEventListener('click', () => {
+    let filterItems = ""
+    recipes.innerHTML = "";
+    const checked = document.querySelectorAll('.checkbox:checked')
+    checked.forEach((box) => filterItems += `&health=${box.value}`)
+    console.log(filterItems)
+    filter(filterItems)
+    filterItems = ""
+    userInput.value = ""
+  })
+
+  const filter = (items) => {
+    API_URL = API_URL + items
+    console.log(API_URL)
+    fetchRecipe(API_URL)
+  }
 }
 
 //eventListeners 
-
 searchButton.addEventListener('click', (event) => {
   event.preventDefault()
   recipes.innerHTML = "";
   handleInput(userInput.value)
   userInput.value = ""
-})
-
-filterBtn.addEventListener('click', () => {
-  let filterItems;
-  checked.forEach((box) => filterItems += `&health=${box.value}`)
-  console.log(checked)
 })
 
 accordion.addEventListener('click', () => {
