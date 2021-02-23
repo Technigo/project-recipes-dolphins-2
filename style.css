@@ -8,6 +8,8 @@ body {
   background-color: #fff;
   color: #202125;
   width: 100%;
+  position:relative;
+  height: 100vh;
 
   /* font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif; */
   font-family: 'Roboto', sans-serif;
@@ -15,35 +17,62 @@ body {
 
 }
 
+.accordion-container
+{
+  position: absolute;
+  top:100px; 
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 150px;
+}
+
 .accordion {
   height: 30px;
   width: 100%;
   background-color: #202125;
+  position:relative;
 }
 
 .accordion-extend {
-  display:none;
-  background-color: black;
+  position:absolute;
+  left: 0;
+  height: 0;
+  overflow-y: hidden;
+  transition: height 0.5s;
+  display: flex;
+  flex-wrap: wrap;
+  width:100%;
+  background-color: grey;
 }
 
-.checkbox {
+.filter {
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  background-color: rgb(42, 42, 194);
+  color: white;
+  border: 1px solid rgb(42, 42, 194);
+}
+/* .checkbox {
   display: ;
   cursor: pointer;
   font-family: ;
   font-size: ; 
-}
+} */
 
 .active + div {
-  display: block;
-  height: 200px;
+  overflow-y: visible;
+  height: 110px;
   width: 100%;
 }
 
-.main {
+/* .main {
   /* width: 100%;
   display: flex;
-  flex-direction: column; */
-}
+  flex-direction: column; 
+} */
 
 h1 {
   font-size: 24px;
@@ -53,9 +82,11 @@ h1 {
   background-color: #dfdbdb;
   display: flex;
   flex-direction: row;
-  /* justify-content: space-evenly; */
+  justify-content: space-between;
   align-items: center;
-  padding-left: 20px;
+  padding: 10px 20px 10px 20px;
+  position: relative;
+  height: 110px;
   /* position: relative; */
 }
 
@@ -74,27 +105,35 @@ h1 {
   /* position: absolute; */
 }
 
+.menu {
+  display: none;
+}
+
 .menu li, a  {
   text-decoration: none;
   list-style-type: none;
   display: inline;
-  color: #202125
+  color: #202125;
+  padding: 0 10px;
 }
 
 .user-input {  /* Search bar */
   border: 1px solid #e4e4e4;
   border-radius: 3px;
   background-color: rgb(251, 251, 251);
+  height: 33px;
 }
 
 .search-button {
-  border-radius: 3px;
-  padding: 0;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  background-color: rgb(42, 42, 194);
+  color: white;
+  border: 1px solid rgb(42, 42, 194);
 }
 
-.recipes-container {
-  
-}
 
 .recipes {  /* This is the parent div of recipe images */
   /* width: 100%;
@@ -103,25 +142,39 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 50px 0;
 }
 
 .img-container { /* This is the div of each recipe image */
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  /* background-color: rgb(236, 230, 230); */
 }
 
 .img-container img {  /* Rundade hörn på receptbilderna */
   border-radius: 8px;
- 
+
 }
 
 .footer {
+  display: flex;
   background-color: #dfdbdb;
   height: 100px;
-
-}
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 
 /** MEDIA QUERIES  **/
 @media (min-width: 700px) {
+
+  .menu {
+    display: inline-block;
+  }
   .recipes-container {
    
     /* width:100%; */
@@ -146,4 +199,5 @@ h1 {
   .img-container {
     width: 25%;
   }
+}
 }

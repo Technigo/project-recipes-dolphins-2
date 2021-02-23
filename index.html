@@ -25,18 +25,8 @@
         <input type="text" id="user-input" class="user-input" name="user-input" />
         <button id='search-button' class='search-button'>Search</button>
       </form>
-      <div class="accordion" id="accordion"></div>
-      <div class="accordion-extend">
-        <input type="checkbox" class="checkbox"  id="alcoholfree" name="checkbox" value="alcohol-free"/>
-        <label for="alcoholfree">Alcohol Free</label>
-        <input type="checkbox" class="checkbox" id="vegetarian" name="checkbox" value="vegetarian"/>
-        <label for="vegetarian">Vegetarian</label>
-        <input type="checkbox" class="checkbox" id="treenutfree" name="checkbox" value="tree-nut-free"/>
-        <label for="treenutfree">Tree-nut free</label>
-        <input type="checkbox" class="checkbox" id="peanutfree" name="checkbox" value="peanut-free"/>
-        <label for="peanutfree">Peanut free</label>
-        <button class="filter" id="filter">Filter</button>
-      </div>
+    </section>
+
     <section class="menu-container">
       <ul class="menu">
         <li><a href="#">Recipes</a></li>
@@ -44,7 +34,31 @@
         <li><a href="#">Contact us</a></li>
       </ul>
     </section>
-  </section>
+
+    <div class="accordion-container">
+      <div class="accordion" id="accordion"></div>
+      <div class="accordion-extend">
+        <div  class="alcoholfree">
+          <input type="checkbox" class="checkbox"  id="alcoholfree" name="checkbox" value="alcohol-free"/>
+          <label for="alcoholfree">Alcohol Free</label>
+        </div>
+        <div class="vegetarian">
+          <input type="checkbox" class="checkbox" id="vegetarian" name="checkbox" value="vegetarian"/>
+          <label for="vegetarian">Vegetarian</label>
+        </div>
+        <div class="treenutfree">
+          <input type="checkbox" class="checkbox" id="treenutfree" name="checkbox" value="tree-nut-free"/>
+          <label for="treenutfree">Tree-nut free</label>
+        </div>
+        <div class="peanutfree">
+          <input type="checkbox" class="checkbox" id="peanutfree" name="checkbox" value="peanut-free"/>
+          <label for="peanutfree">Peanut free</label>
+        </div>
+        <button class="filter" id="filter">Filter</button>
+      </div>
+    </div>
+  </div>
+
 
   </header>
 
@@ -56,9 +70,9 @@
   </main>
 
   <footer class="footer">
-
-  </footer>
-  <script src="./script.js"></script>
-</body>
-
-</html>
+    &copy Andrea Larsson, Astrid Persson, Caroline Fahlgren & Pauline Andersson
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+  
+  </html>
