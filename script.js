@@ -6871,8 +6871,9 @@ const displayRecipe = (recipesData) => {
     recipes.innerHTML += `
         <div class="img-container">
         <img src= '${img}'/>
-        </div>
+       
         <h1>${label}</h1>
+         </div>
         `
   })
 }
