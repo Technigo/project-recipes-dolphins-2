@@ -4,15 +4,13 @@
 }
 
 body {
-  margin: 0;
   background-color: #fff;
   color: #202125;
-  width: 100%;
   position:relative;
-  height: 100vh;
+  max-width: 100%;
+  min-height: 100%;
   font-family: 'Roboto', sans-serif;
   font-family: 'Ubuntu', sans-serif;
-
 }
 
 .accordion-container
@@ -99,12 +97,8 @@ h1 {
 }
 
 .checkbox {
-  display: ;
   cursor: pointer;
-  font-family: ;
-  font-size: ; 
   position: relative;
-  width: ;
   height: 10p;
 }
 
@@ -142,6 +136,11 @@ h1 {
   border: 1px solid rgb(42, 42, 194);
 }
 
+.recipes-wrap {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
 
 .recipes {  /* This is the parent div of recipe images */
   /* width: 100%;
@@ -151,31 +150,34 @@ h1 {
   justify-content: center;
   align-items: center;
   padding: 50px 0;
+  padding-bottom: 100px;
 }
 
 .img-container { /* This is the div of each recipe image */
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;;
   margin-top: 50px;
   /* background-color: rgb(236, 230, 230); */
 }
 
 .img-container img {  /* Rundade hörn på receptbilderna */
   border-radius: 8px;
+}
 
+a {
+  padding: 0;
+  margin: 0;
 }
 
 .footer {
   display: flex;
   background-color: #dfdbdb;
   height: 100px;
-  position: absolute;
+  position:absolute;
   bottom: 0;
   width: 100%;
   justify-content: center;
   align-items: center;
+  flex: 1 1 auto;
 }
 
 /** MEDIA QUERIES  **/
@@ -204,5 +206,4 @@ h1 {
   .img-container {
     width: 25%;
   }
-}
 }
