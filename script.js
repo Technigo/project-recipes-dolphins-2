@@ -6886,7 +6886,7 @@ const arrayRecipe = // 20210222142043
 
 const handleInput = (userInput) => {
   const query = userInput;
-  let API_URL = 'https://api.edamam.com/search?q=' + query + '&app_id=aec4b6aa&app_key=b760316ae5d674221245ca577a9ae586'
+  let API_URL = 'https://api.edamam.com/search?q=' + query + '&app_id=0d73ff74&app_key=b1b49a5152a0c80470f29a77d81be3b5'
   fetchRecipe(API_URL)
   console.log(API_URL)
 
@@ -6920,4 +6920,4 @@ accordion.addEventListener('click', () => {
   accordion.classList.toggle('active')
 })
 
-fetchRecipe("https://api.edamam.com/search?q=chicken&app_id=aec4b6aa&app_key=b760316ae5d674221245ca577a9ae586")
+fetchRecipe("https://api.edamam.com/search?q=chicken&app_id=0d73ff74&app_key=b1b49a5152a0c80470f29a77d81be3b5")

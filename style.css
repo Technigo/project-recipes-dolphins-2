@@ -10,8 +10,6 @@ body {
   width: 100%;
   position:relative;
   height: 100vh;
-
-  /* font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif; */
   font-family: 'Roboto', sans-serif;
   font-family: 'Ubuntu', sans-serif;
 
@@ -41,19 +39,29 @@ body {
   overflow-y: hidden;
   transition: height 0.5s;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   width:100%;
   background-color: grey;
 }
 
+.accordion-col {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
 .filter {
   border-radius: 5px;
+  height: 30px;
   padding: 5px 10px;
   font-family: 'Ubuntu', sans-serif;
   font-size: 18px;
   background-color: rgb(42, 42, 194);
   color: white;
   border: 1px solid rgb(42, 42, 194);
+  margin-top: 70px;
 }
 /* .checkbox {
   display: ;
@@ -168,16 +176,13 @@ h1 {
   width: 100%;
   justify-content: center;
   align-items: center;
+}
 
 /** MEDIA QUERIES  **/
 @media (min-width: 700px) {
 
   .menu {
     display: inline-block;
-  }
-  .recipes-container {
-   
-    /* width:100%; */
   }
  
   .recipes { /* This is the parent div of recipe images */
